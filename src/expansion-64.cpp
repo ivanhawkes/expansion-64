@@ -29,7 +29,6 @@ int64_t alarm_callback(alarm_id_t id, void *user_data) {
 #define UART_RX_PIN 5
 
 
-
 int main()
 {
     stdio_init_all();

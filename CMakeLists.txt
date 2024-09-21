@@ -47,7 +47,9 @@ pico_enable_stdio_usb(expansion-64 0)
 
 # Add the standard library to the build
 target_link_libraries(expansion-64
-        pico_stdlib)
+        pico_stdlib
+        tinyusb_device
+        )
 
 # Add the standard include files to the build
 target_include_directories(expansion-64 PRIVATE
