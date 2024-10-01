@@ -72,8 +72,7 @@ target_include_directories(expansion-64 PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}/.. # for our common lwipopts or any other standard includes, if required
 )
 
-
 # Add any user requested libraries
-target_link_libraries(io-expander hardware_i2c)
+target_link_libraries(expansion-64 hardware_i2c)
 
 pico_add_extra_outputs(expansion-64)
