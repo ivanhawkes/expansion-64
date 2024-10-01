@@ -50,7 +50,10 @@ pico_sdk_init()
 # Add executable. Default name is the project name, version 0.1
 
 add_executable(expansion-64 
-  src/expansion-64.cpp)
+  src/Expansion-64.cpp
+  src/DigitalInput.cpp
+  src/AnalogueInput.cpp
+  )
 
 pico_set_program_name(expansion-64 "expansion-64")
 pico_set_program_version(expansion-64 "0.1")
@@ -63,6 +66,7 @@ pico_enable_stdio_usb(expansion-64 0)
 target_link_libraries(expansion-64
         pico_stdlib
         tinyusb_device
+        hardware_adc
         )
 
 # Add the standard include files to the build
